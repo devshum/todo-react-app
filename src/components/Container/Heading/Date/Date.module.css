@@ -1,0 +1,35 @@
+.date {
+    display: grid;
+    column-gap: .5rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.figure {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.month,
+.year { 
+    text-align: center;
+    font-size: 1rem; 
+}
+
+.month { 
+    align-self: end; 
+    font-weight: 600; 
+}
+
+.year { 
+    align-self: start; 
+    font-weight: 300; 
+}
+
