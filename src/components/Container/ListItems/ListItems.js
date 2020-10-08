@@ -1,15 +1,8 @@
 import React from 'react';
 import ListItem from './ListItem/ListItem';
-import styles from './ListItems.module.css';
 
-const ListItems = () => <div>
-                           <ListItem />
-                           <ListItem />
-                           <ListItem />
-                           <ListItem />
-                           <ListItem />
-                           <ListItem />
-                           <ListItem />
-                        </div>
+const ListItems = props => <div>
+                           
+                           </div>
 
 export default ListItems;
