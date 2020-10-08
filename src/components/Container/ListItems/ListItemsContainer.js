@@ -1,12 +1,12 @@
-import React from 'react';
-import ListItem from './ListItem/ListItem';
+import { connect } from 'react-redux';
+import ListItems from './ListItems';
 
-const ListItemsContainer = props => {
-    return(
-        <div>
+const mapStateToProps = state => ({ todos: state.todoSection.todos });
 
-        </div>
-    )
-}
+// const mapDispatchToProps = dispatch => {
+//     return null
+// };
+
+const ListItemsContainer = connect(mapStateToProps)(ListItems);
 
 export default ListItemsContainer;
