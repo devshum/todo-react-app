@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ListItems from './ListItems';
+import Todos from './Todos';
 
 const mapStateToProps = state => ({ todos: state.todoSection.todos });
 
@@ -7,6 +7,6 @@ const mapStateToProps = state => ({ todos: state.todoSection.todos });
 //     return null
 // };
 
-const ListItemsContainer = connect(mapStateToProps)(ListItems);
+const ListItemsContainer = connect(mapStateToProps)(Todos);
 
 export default ListItemsContainer;

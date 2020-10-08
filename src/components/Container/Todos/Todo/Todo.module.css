@@ -1,4 +1,4 @@
-.listItem {
+.todo {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6,12 +6,12 @@
     margin-top: 2.4rem;
 }
 
-.listItem input { display: none; }
+.todo input { display: none; }
 
-.listItem label,
-.listItem label:after { border-radius: 50%; }
+.todo label,
+.todo label:after { border-radius: 50%; }
 
-.listItem label {
+.todo label {
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
@@ -19,7 +19,7 @@
     border: solid .4rem #49e2a1;
 }
 
-.listItem label:after {
+.todo label:after {
     transform: translate(-50%, -50%);
     background: #49e2a1;
     transition: all .3s;
@@ -33,12 +33,12 @@
     top: 50%;
 }
 
-.listItem input:checked + div {
+.todo input:checked + div {
     color: #dbdde2;
     animation: doneAnimation .5s;
 }
 
-.listItem input:checked ~ label:after { opacity: 1; }
+.todo input:checked ~ label:after { opacity: 1; }
 
 @keyframes doneAnimation {
     0% {
