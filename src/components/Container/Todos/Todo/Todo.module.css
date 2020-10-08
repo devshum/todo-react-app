@@ -3,8 +3,11 @@
     align-items: center;
     justify-content: space-between;
 
+    position: relative;
     margin-top: 2.4rem;
 }
+
+.todo, label { cursor: pointer; }
 
 .todo input { display: none; }
 
@@ -14,7 +17,6 @@
 .todo label {
     width: 2.5rem;
     height: 2.5rem;
-    cursor: pointer;
     position: relative;
     border: solid .4rem #49e2a1;
 }
@@ -33,12 +35,24 @@
     top: 50%;
 }
 
-.todo input:checked + div {
+.todo input:checked ~ span {
     color: #dbdde2;
+    text-decoration: line-through;
     animation: doneAnimation .5s;
 }
 
 .todo input:checked ~ label:after { opacity: 1; }
+
+.todo:hover figure { opacity: 1; }
+
+.todo figure {
+    transition: all .5s;
+    position: absolute;
+    color: #f76767;
+    font-size: 2rem;
+    left: -2.4rem;
+    opacity: 0;
+}
 
 @keyframes doneAnimation {
     0% {

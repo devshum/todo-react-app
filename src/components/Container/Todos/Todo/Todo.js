@@ -3,7 +3,8 @@ import styles from './Todo.module.css';
 
 const Todo = props => <div className={styles.todo}>
                             <input id={`${props.id}`} type="checkbox"/>
-                            <div>{props.text}</div>
+                            <figure>&times;</figure>
+                            <span>{props.text}</span>
                             <label htmlFor={`${props.id}`}>&nbsp;</label>
                        </div>
 
