@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Button.module.css';
 
-const Button = () => <div> It will be a button </div>
+const Button = () => <button className={styles.button}><span>&#10010;</span></button>
 
 export default Button;

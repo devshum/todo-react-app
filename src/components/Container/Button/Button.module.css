@@ -1,0 +1,35 @@
+.button {
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.button:hover::after { 
+    transform: scale(1.5); 
+    opacity: 0;
+}
+
+.button::after {
+    background-color: inherit;
+    border-radius: inherit;
+    transition: all .5s;
+    position: absolute;
+    display: block;
+    height: 100%;
+    content: '';
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+.button:hover span { color: #fff; }
+
+.button span {
+    display: inline-block;
+    transition: all .3s;
+    position: absolute;
+}

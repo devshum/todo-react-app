@@ -1,6 +1,6 @@
 .container {
     box-shadow: 0 .1rem .5rem rgba(0, 0, 0, 0.1);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -47%);
     background-color: #fff;
     position: absolute;
     min-height: 80vh;
@@ -8,4 +8,19 @@
     padding: 4.2rem;
     left: 50%;
     top: 50%;
+}
+
+.button button {
+    background-color: #50e3a4;
+    position: absolute;
+    bottom: -6.2%;
+    height: 6rem;
+    width: 6rem;
+    left: 50%;
+}
+
+.button button span { 
+    transform: translate(-50%, -50%);
+    color:  #46be8b;
+    font-size: 2rem; 
 }

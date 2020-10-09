@@ -9,7 +9,9 @@ const Container = () => <div className={styles.container}>
                             <Input />
                             <Heading />
                             <TodosContainer />
-                            <Button />
+                            <div className={styles.button}>
+                                <Button />
+                            </div>
                         </div>
 
 export default Container;
