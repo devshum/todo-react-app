@@ -14,7 +14,6 @@ const initialState = {
 const todoReducer = (state = initialState, action) => {
     switch (action.type) {
         case TOGGLE_INPUT:
-            console.log('click')
             return {
                 ...state,
                 toggled: !state.toggled
@@ -26,5 +25,5 @@ const todoReducer = (state = initialState, action) => {
 
 export default todoReducer;
 
-//export const toggleInputAC = () => ( {type: 'TOGGLE-INPUT' } );
+export const toggleInputAC = () => ({ type: TOGGLE_INPUT });
 

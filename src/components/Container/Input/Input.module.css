@@ -37,18 +37,3 @@
     height: 2.5rem;
     width: 2.5rem;
 }
-
-.button button {
-    background-color: #46be8b;
-    position: absolute;
-    left: 1.8rem;
-    height: 2rem;
-    width: 2rem;
-    top: .3rem;
-}
-
-.button button span { 
-    transform: translate(-45%, -50%);
-    color: #50e3a4;
-    font-size: 1rem; 
-}

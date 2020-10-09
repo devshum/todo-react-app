@@ -1,20 +1,18 @@
-import React from 'react';
-import Button from '../Button/Button';
+import ButtonSubmit from './ButtonSubmit/ButtonSubmit';
 import styles from './Input.module.css';
+import React from 'react';
 
 const Input = props => {
-   let inputContainer = [];
-   props.toggled ? inputContainer = [styles.inputContainer, styles.shown]
-                 : inputContainer = [styles.inputContainer, styles.hidden];
+   let inputContainerStyles = [];
+   props.toggled ? inputContainerStyles = [styles.inputContainer, styles.shown]
+                 : inputContainerStyles = [styles.inputContainer, styles.hidden];
 
-    return(
-        <div className={inputContainer.join(' ')}>
-            <input type="text"/>
-            <div className={styles.button}>
-                <Button />
+    return <div className={inputContainerStyles.join(' ')}>
+                <input type="text"/>
+                <div className={styles.button}>
+                    <ButtonSubmit />
+                </div>
             </div>
-        </div>
-    );
-}
+};
 
 export default Input;
