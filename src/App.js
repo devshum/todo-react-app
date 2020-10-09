@@ -1,7 +1,7 @@
-import Container from './components/Container/Container';
+import ContainerContainer from './components/Container/ContainerContainer';
 import React from 'react';
 import './App.css';
 
-const App = () => ( <Container /> );
+const App = () => ( <ContainerContainer /> );
 
 export default App;

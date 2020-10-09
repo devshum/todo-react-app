@@ -4,11 +4,22 @@
     align-items: center;
 
     background-color: #50e3a4;
+    transition: all .5s;
     position: absolute;
     height: 5rem;
     width: 100%;
     top: -5rem;
     left: 0;
+}
+
+.shown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .inputContainer input {

@@ -5,12 +5,12 @@ import HeadingContainer from './Heading/HeadingContainer';
 import styles from './Container.module.css';
 import TodosContainer from './Todos/TodosContainer';
 
-const Container = () => <div className={styles.container}>
-                            <Input />
+const Container = props => <div className={styles.container}>
+                            <Input toggled={props.toggled} />
                             <HeadingContainer />
                             <TodosContainer />
                             <div className={styles.button}>
-                                <Button />
+                                <Button toggleInput={props.toggleInput} />
                             </div>
                         </div>
 
