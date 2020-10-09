@@ -1,11 +1,11 @@
-.date {
+.fullDate {
     display: grid;
     column-gap: .5rem;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
 }
 
-.figure {
+.date {
     display: grid;
     justify-content: center;
     align-items: center;
