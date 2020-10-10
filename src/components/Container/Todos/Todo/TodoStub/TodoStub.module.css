@@ -1,0 +1,17 @@
+.todoStub {
+    transition: all .5s;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 70%;
+    left: 0;
+}
+
+.shown { opacity: 1; visibility: visible; }
+.hidden { opacity: 0; visibility: hidden; }
+
+.todoStub h3,
+.todoStub span { color:#46be8b; }
+
+.todoStub span { font-size: 4rem; }
+
