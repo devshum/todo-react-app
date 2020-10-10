@@ -10,8 +10,7 @@ const Todos = props => {
 
     return <div>
                 { todos }
-                <TodoStub toggled={props.toggled}
-                          todos={props.todos} />
+                <TodoStub stub={props.stub} />
            </div>
 };
 
