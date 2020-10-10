@@ -11,7 +11,7 @@ const Container = props => {
                   : containerStyles = [styles.container, styles.inputHidden]
 
     return <div className={containerStyles.join(' ')}>
-                <Input toggled={props.toggled} />
+                <Input toggled={props.toggled} inputText={props.inputText} onTypeInputText={props.typeInputText} />
                 <HeadingContainer />
                 <Todos todos={props.todos} />
                 <div className={styles.button}>
