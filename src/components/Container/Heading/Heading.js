@@ -4,7 +4,10 @@ import Date from './Date/Date';
 import React from 'react';
 
 const Heading = props => <div className={styles.heading}>
-                              <Date date={props.date} month={props.month} year={props.year} />
+                              <Date date={props.date} 
+                                    month={props.month} 
+                                    year={props.year} />
+                                    
                               <DayOfWeek day={props.day}/>
                          </div>
 

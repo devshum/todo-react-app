@@ -8,7 +8,6 @@ import Container from './Container';
 
 const mapStateToProps = state => ({ inputText: state.todoSection.inputText,
                                     toggled: state.todoSection.toggled,
-                                    stub: state.todoSection.stub,
                                     todos: state.todoSection.todos });
 
 const mapDispatchToProps = dispatch => ({ 

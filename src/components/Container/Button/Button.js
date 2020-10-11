@@ -3,11 +3,15 @@ import React from 'react';
 
 const Button = props => {
     let buttonStyles = [];
-    props.stub && !props.toggled ? buttonStyles = [styles.button, styles.buttonScaleAnimation]
-                                                : buttonStyles = [styles.button]
+    props.todos.length === 0 && !props.toggled ? buttonStyles = [styles.button, styles.buttonScaleAnimation]
+                                               : buttonStyles = [styles.button];
+
     const toggleInput = () => props.toggleInput();
 
-    return <button onClick={toggleInput} className={buttonStyles.join(' ')}><span>&#10010;</span></button>
+    return <button onClick={toggleInput} 
+                   className={buttonStyles.join(' ')}>
+                   <span>&#10010;</span>
+            </button>
 };
 
 export default Button;

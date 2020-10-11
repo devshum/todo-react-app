@@ -1,6 +1,6 @@
+import TodoStub from './Todo/TodoStub/TodoStub';
 import Todo from './Todo/Todo';
 import React from 'react';
-import TodoStub from './Todo/TodoStub/TodoStub';
 
 const Todos = props => {
     let todos;
@@ -11,7 +11,7 @@ const Todos = props => {
 
     return <div>
                 { todos }
-                <TodoStub stub={props.stub} />
+                <TodoStub todos={props.todos} />
            </div>
 };
 

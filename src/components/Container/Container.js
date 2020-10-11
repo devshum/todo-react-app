@@ -19,13 +19,12 @@ const Container = props => {
                 <HeadingContainer />
                 
                 <Todos onRemoveTodo={props.onRemoveTodo}
-                       todos={props.todos}
-                       stub={props.stub} />
+                       todos={props.todos} />
                 
                 <div className={styles.button}>
                     <Button toggleInput={props.toggleInput}
                             toggled={props.toggled}
-                            stub={props.stub} />
+                            todos={props.todos} />
                 </div>
             </div>
 }

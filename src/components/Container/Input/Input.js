@@ -10,7 +10,9 @@ const Input = props => {
     const typeInputText = e => props.onTypeInputText(e.target.value);
     
     return <div className={inputContainerStyles.join(' ')}>
-                <input type="text" onChange={typeInputText} value={props.inputText} />
+                <input type="text" onChange={typeInputText} 
+                                   value={props.inputText} />
+                                   
                 <div className={styles.button}>
                     <ButtonSubmit onAddTodo={props.onAddTodo} />
                 </div>
