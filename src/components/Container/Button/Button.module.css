@@ -5,12 +5,13 @@
     outline: none;
     border: none;
 
+    transform: translateX(-50%);
     background-color: #50e3a4;
     position: absolute;
-    bottom: -6%;
     height: 6rem;
+    bottom: -6%;
     width: 6rem;
-    left: 41%;
+    left: 50%;
 }
 
 .button:hover::after { 
@@ -47,9 +48,13 @@
 .buttonScaleAnimation { animation: infiniteScale 1.8s infinite; }
 
 @keyframes infiniteScale {
-    0% { transform: scale(1); }
+    0% { transform: translateX(-50%) scale(1); }
 
-    50% { transform: scale(1.2); }
+    50% { transform: translateX(-50%) scale(1.2); }
 
-    10% { transform: scale(1); }
+    10% { transform: translateX(-50%) scale(1); }
+}
+
+@media only screen and (max-width: 600px) {
+    .button { bottom: 5%; }
 }
