@@ -18,7 +18,8 @@ const Container = props => {
 
                 <HeadingContainer />
                 
-                <Todos todos={props.todos}
+                <Todos onRemoveTodo={props.onRemoveTodo}
+                       todos={props.todos}
                        stub={props.stub} />
                 
                 <div className={styles.button}>

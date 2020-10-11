@@ -1,25 +1,22 @@
+
+
 const ADD_TODO = 'ADD-TODO';
+const REMOVE_TODO = 'REMOVE-TODO';
 const TOGGLE_INPUT = 'TOGGLE-INPUT';
 const TYPE_INPUT_TEXT = 'TYPE-INPUT-TEXT';
 
 const uniqid = require('uniqid');
 
 const initialState = {
-    stub: true,
     toggled: false,
     inputText: '',
-    todos: [
-                // { ID: 1, text: 'Buy new sweatshirt'},
-                // { ID: 2, text: 'Read an article'},
-                // { ID: 3, text: 'Try not to fall asleep'},
-                // { ID: 4, text: 'Go for a walk'}
-            ]
+    stub: true,
+    todos: []
 };
 
 const todoReducer = (state = initialState, action) => {
     switch (action.type) {
         case TOGGLE_INPUT:
-            console.log('toggle')
             return {
                 ...state,
                 toggled: !state.toggled
@@ -35,6 +32,7 @@ const todoReducer = (state = initialState, action) => {
             const text = state.inputText;
 
             if(state.inputText !== '') {
+                
                 return {
                     ...state,
                     todos: [...state.todos,  { ID: uniqid(), text: text} ],
@@ -44,6 +42,14 @@ const todoReducer = (state = initialState, action) => {
 
             } else return state;
 
+        case REMOVE_TODO:
+            
+            
+            return {
+                ...state,
+                todos: [...state.todos.filter(todo => todo.ID !== action.ID)],
+            };
+
         default: return state;
     }
 };
@@ -51,6 +57,7 @@ const todoReducer = (state = initialState, action) => {
 export default todoReducer;
 
 export const addTodoAC = () => ({ type: ADD_TODO });
+export const removeTodoAC = ID => ({ type: REMOVE_TODO, ID });
 export const toggleInputAC = () => ({ type: TOGGLE_INPUT });
 export const typeInputTextAC = inputText => ({ type: TYPE_INPUT_TEXT, inputText });
 

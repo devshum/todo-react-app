@@ -1,4 +1,8 @@
-import { toggleInputAC, typeInputTextAC, addTodoAC } from '../../redux/todoReducer';
+import { toggleInputAC, 
+         typeInputTextAC, 
+         addTodoAC, 
+         removeTodoAC } from '../../redux/todoReducer';
+
 import { connect } from 'react-redux';
 import Container from './Container';
 
@@ -9,6 +13,7 @@ const mapStateToProps = state => ({ inputText: state.todoSection.inputText,
 
 const mapDispatchToProps = dispatch => ({ 
     onAddTodo: () => dispatch(addTodoAC()),
+    onRemoveTodo: ID => dispatch(removeTodoAC(ID)),
     toggleInput: () => dispatch(toggleInputAC()),
     typeInputText: text => dispatch(typeInputTextAC(text))
 });

@@ -1,15 +1,18 @@
 const today = new Date();
 
 const days = [ 'Monday', 'Tuesday', 'Wednesday', 
-              'Thursday', 'Friday', 'Saturday', 
-              'Sunday' ];
+               'Thursday', 'Friday', 'Saturday', 
+               '-1' ];
 
-const months = [ 'January', 'February ', 'March', 
-                'April ', 'May ', 'June ', 'July', 
-                'August', 'September', 'October ', 
-                'November', 'December' ];
+const months = [ 'January', 'February', 'March', 
+                 'April ', 'May ', 'June ', 'July', 
+                 'August', 'September', 'October ', 
+                 'November', 'December' ];
 
-const gottenDay = days[today.getDay() - 1];
+let gottenDay;
+const curDayNum = today.getDay() - 1;
+curDayNum === -1 ? gottenDay = 'Sunday' : gottenDay = days[curDayNum];
+
 const gottenMonth = (months[today.getMonth()]).slice(0, 3);
 const gottenYear = today.getFullYear();
 const gottenDate = today.getDate();

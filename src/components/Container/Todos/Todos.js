@@ -5,8 +5,9 @@ import TodoStub from './Todo/TodoStub/TodoStub';
 const Todos = props => {
     let todos;
     if(props.todos.length > 0) todos = props.todos.map(todo => <Todo key={todo.ID} 
-                                                                     id={todo.ID}
-                                                                     text={todo.text} /> );
+                                                                     ID={todo.ID}
+                                                                     text={todo.text}
+                                                                     onRemoveTodo={props.onRemoveTodo} /> );
 
     return <div>
                 { todos }
