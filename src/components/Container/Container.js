@@ -13,12 +13,12 @@ const Container = props => {
     return <div className={containerStyles.join(' ')}>
                 <Input onTypeInputText={props.typeInputText}
                        inputText={props.inputText} 
-                       onAddTodo={props.onAddTodo}
+                       onAddTodo={props.addTodo}
                        toggled={props.toggled} />
 
                 <HeadingContainer />
                 
-                <Todos onRemoveTodo={props.onRemoveTodo}
+                <Todos onRemoveTodo={props.removeTodo}
                        todos={props.todos} />
                 
                 <div className={styles.button}>
